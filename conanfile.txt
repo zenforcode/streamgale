@@ -1,0 +1,13 @@
+[requires]
+boost/1.82.0
+zeromq/4.3.4
+onnxruntime/1.14.1
+
+[generators]
+cmake
+
+[options]
+boost:shared=True
+zeromq:shared=True
+onnxruntime:shared=True
+

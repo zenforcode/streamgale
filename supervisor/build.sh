@@ -7,4 +7,4 @@ else
 fi
 cd build 
 cmake ../CMakeLists.txt
-
+make

@@ -14,9 +14,6 @@ else()
 endif()
 
 
-# Add Crow as a subdirectory
-add_subdirectory(external/crow)
-
 # Find ASIO
 find_path(ASIO_INCLUDE_DIR asio.hpp
     PATHS
@@ -25,10 +22,8 @@ find_path(ASIO_INCLUDE_DIR asio.hpp
 )
 
 # Find Crow
-find_path(CROW_INCLUDE_DIR crow.h
-    PATHS
-        ${PROJECT_SOURCE_DIR}/external/crow/include
-)
+find_package(Crow CONFIG REQUIRED)
+
 
 # Ensure dependencies are found
 if(NOT ASIO_INCLUDE_DIR)
@@ -46,6 +41,7 @@ message(STATUS "Found Crow in: ${CROW_INCLUDE_DIR}")
 
 # Add executable
 add_executable(toposerver toposerver.cpp)
+target_link_libraries(toposerver PRIVATE Crow::Crow asio::asio)
 
 # Include directories
 target_include_directories(toposerver PRIVATE ${ASIO_INCLUDE_DIR} ${CROW_INCLUDE_DIR})

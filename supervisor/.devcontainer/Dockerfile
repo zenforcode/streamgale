@@ -32,7 +32,7 @@ RUN git clone https://github.com/microsoft/vcpkg.git /opt/vcpkg && \
     cd /opt/vcpkg && \
     ./bootstrap-vcpkg.sh && \
     ln -s /opt/vcpkg/vcpkg /usr/local/bin/vcpkg
-
+RUN chmod -R o+rwx /opt/vcpkg/
 
 
 WORKDIR /workspace

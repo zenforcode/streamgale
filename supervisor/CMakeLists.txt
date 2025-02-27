@@ -13,7 +13,6 @@ find_path(ASIO_INCLUDE_DIR asio.hpp
     PATHS
         /usr/include
         /usr/local/include
-        ${CMAKE_SOURCE_DIR}/external/asio/include
     NO_DEFAULT_PATH
 )
 
@@ -33,10 +32,13 @@ if(NOT CROW_INCLUDE_DIR)
     message(FATAL_ERROR "Crow not found!")
 endif()
 
+add_library(asio INTERFACE)
+target_compile_options(asio INTERFACE ASIO_STANDALONE)
+target_include_directories(asio INTERFACE /usr/include)
 # Print found paths
 message(STATUS "Found Asio in: ${ASIO_INCLUDE_DIR}")
 message(STATUS "Found Crow in: ${CROW_INCLUDE_DIR}")
-
+include_directories(${ASIO_INCLUDE_DIR})
 # Add executable
 add_executable(toposerver toposerver.cpp)
 

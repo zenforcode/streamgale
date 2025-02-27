@@ -4,6 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
+                "/usr/include",
                 "${workspaceFolder}/external/crow/include/**"
             ],
             

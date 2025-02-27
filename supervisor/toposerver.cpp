@@ -1,5 +1,8 @@
-#include "crow.h"
-
+#include <asio.hpp>
+int main() {
+    return 0;
+}
+/**
 int main() {
     crow::SimpleApp app;
     CROW_ROUTE(app, "/bucket/<string>")
@@ -54,3 +57,4 @@ int main() {
     // Start the server
     app.port(8080).multithreaded().run();
 }
+**/

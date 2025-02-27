@@ -1,9 +1,18 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(TopologyServer)
+project(supervisor)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Check for vcpkg toolchain
+if(DEFINED ENV{VCPKG_ROOT})
+    set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
+    message(STATUS "Using vcpkg toolchain file: ${CMAKE_TOOLCHAIN_FILE}")
+else()
+    message(WARNING "VCPKG_ROOT is not set, vcpkg may not be available.")
+endif()
+
 
 # Add Crow as a subdirectory
 add_subdirectory(external/crow)

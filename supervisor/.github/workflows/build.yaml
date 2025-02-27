@@ -23,7 +23,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y cmake g++ libssl-dev libcurl4-openssl-dev libasio-dev
-     
+            
       - name: Configure and Build with CMake
         run: |
           mkdir -p build

@@ -1,8 +1,5 @@
-#include <asio.hpp>
-int main() {
-    return 0;
-}
-/**
+#include <crow.h>
+
 int main() {
     crow::SimpleApp app;
     CROW_ROUTE(app, "/bucket/<string>")
@@ -20,7 +17,7 @@ int main() {
             if (!body_json || !body_json.has("bucket") || !body_json.has("key")) {
                 return crow::response(400, "Invalid request");
             }
-            return crow::response(200, "{\"upload_id\": \"" + "8912821928198219" + "\"}");
+            return crow::response(503, "Not implemented");
         });
 
     // Upload a part
@@ -31,7 +28,7 @@ int main() {
             if (!body_json || !body_json.has("bucket") || !body_json.has("key") || !body_json.has("data")) {
                 return crow::response(400, "Invalid request");
             }
-            return crow::response(200, "{\"etag\": \"" + "38938928928938298392wrhfax" + "\"}");
+            return crow::response(503, "Not implemented");
         });
 
     // Complete multipart upload
@@ -57,4 +54,3 @@ int main() {
     // Start the server
     app.port(8080).multithreaded().run();
 }
-**/

@@ -12,6 +12,7 @@ RUN apt-get update && \
     clang \
     clang-format \
     clang-tidy \
+    zlib1g-dev \
     gdb \
     curl \
     zip \

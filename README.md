@@ -4,7 +4,7 @@
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![C++](https://img.shields.io/badge/language-C%2B%2B-00599C)
 
-**StreamGale** is a high-performance, distributed real-time stream processing engine written in **C++**. Inspired by **Apache Storm**, it enables developers to process unbounded streams of data with low latency, scalability, and fault tolerance.
+**StreamGale** is a high-performance, distributed real-time stream processing engine written in **C++** and **Rust**. Inspired by **Apache Storm**, it enables developers to process unbounded streams of data with low latency, scalability, and fault tolerance.
 
 ## 🚀 Features
 - **Real-time Processing** – Processes data streams with ultra-low latency.

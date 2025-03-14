@@ -1,3 +1,22 @@
+# S3 Wrapper.
+This document explains the design of an S3 wrapper that enables uploading files to Amazon S3 using multipart upload while supporting authentication via AWS Signature Version 4 (SigV4). The wrapper abstracts the complexities of S3's multipart upload process, providing a streamlined interface for clients to handle large file uploads efficiently and securely.
+Purpose
+
+Multipart upload is essential when dealing with large files, as it allows a file to be split into smaller parts and uploaded in parallel, improving upload reliability and speed. The S3 wrapper handles:
+
+- Initiating multipart uploads.
+- Uploading individual parts.
+- Completing the upload once all parts are successfully transferred.
+- Handling retries for failed parts.
+- Generating AWS SigV4 signed requests for secure communication with S3.
+
+Key Features
+
+- AWS SigV4 Authentication: Ensures all requests are securely signed, allowing authenticated and authorized access to S3.
+- Parallel Part Uploads: Supports concurrent uploading of parts to optimize performance.
+- Resumable Uploads: Provides the ability to resume failed or interrupted uploads.
+- Configurable Part Size: Allows dynamic adjustment of part sizes based on file size and network conditions.
+- Progress Tracking: Optional hooks for monitoring upload progress.
 
 
 # Note on S3 Signature validation

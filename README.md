@@ -135,8 +135,8 @@ StreamGale is an **AI-optimized data streaming and aggregation platform** that e
 ## Machine Learning E2E
 ```mermaid
 flowchart TD
-    A[Data Sources] -->|Batch| B1[Ingestion Layer\n(Airbyte, NiFi)]
-    A -->|Streaming| B2[Streaming Ingestion\n(Kafka, Pulsar)]
+    A[Data Sources] -->|Batch| B1[Ingestion Layer]
+    A -->|Streaming| B2[Streaming Ingestion]
 
     B1 --> C[Processing Layer\n(Streamgale)]
     B2 --> C

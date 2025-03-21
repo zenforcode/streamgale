@@ -155,9 +155,9 @@ flowchart TD
     H --> I[Model Deployment(FastAPI, KServe)]
 
     subgraph Monitoring & Logging
-        J1[Metrics(Prometheus, Grafana)]
-        J2[Logs & Traces(OpenTelemetry, ELK)]
-        J3[Data/Model Drift((WhyLogs, Evidently AI)]
+        J1[Metrics]
+        J2[Logs]
+        J3[Data/Model Drift]
     end
 
     B1 --> J1

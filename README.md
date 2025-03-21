@@ -138,26 +138,26 @@ flowchart TD
     A[Data Sources] -->|Batch| B1[Ingestion Layer]
     A -->|Streaming| B2[Streaming Ingestion]
 
-    B1 --> C[Processing Layer\n(Streamgale)]
+    B1 --> C[Processing Layer-Streamgale]
     B2 --> C
 
-    C --> D1[Data Lake\n(S3, Delta Lake)]
-    C --> D2[Feature Store\n(Feast, Tecton)]
+    C --> D1[Data Lake]
+    C --> D2[Feature Store]
 
-    D1 --> E[Metadata & Catalog\n(DataHub, OpenMetadata)]
+    D1 --> E[Metadata & Catalog]
     D2 --> E
 
-    D2 --> F[Training Orchestration\n(Streamgale)]
+    D2 --> F[Training Streamgale]
     D1 --> F
 
-    F --> G[Model Training\n(Streamgale+PyTorch)]
-    G --> H[Model Registry\n(MLflow, SageMaker)]
-    H --> I[Model Deployment\n(FastAPI, KServe)]
+    F --> G[Model Training(Streamgale+PyTorch)]
+    G --> H[Model Registry(MLflow, SageMaker)]
+    H --> I[Model Deployment(FastAPI, KServe)]
 
     subgraph Monitoring & Logging
-        J1[Metrics\n(Prometheus, Grafana)]
-        J2[Logs & Traces\n(OpenTelemetry, ELK)]
-        J3[Data/Model Drift\n(WhyLogs, Evidently AI)]
+        J1[Metrics(Prometheus, Grafana)]
+        J2[Logs & Traces(OpenTelemetry, ELK)]
+        J3[Data/Model Drift((WhyLogs, Evidently AI)]
     end
 
     B1 --> J1

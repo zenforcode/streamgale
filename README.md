@@ -150,9 +150,9 @@ flowchart TD
     D2 --> F[Training Streamgale]
     D1 --> F
 
-    F --> G[Model Training(Streamgale)]
-    G --> H[Model Registry(MLflow, SageMaker)]
-    H --> I[Model Deployment(FastAPI, KServe)]
+    F --> G[Model Training]
+    G --> H[Model Registry]
+    H --> I[Model Deployment]
 
     subgraph Monitoring & Logging
         J1[Metrics]

@@ -1,4 +1,4 @@
-Epic: # **Design and Implement Streamgale Topology  Workflow Descriptor in YAML**
+# **Design and Implement Streamgale Topology  Workflow Descriptor in YAML**
 
 ## **Description**
 

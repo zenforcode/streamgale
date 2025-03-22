@@ -1,7 +1,7 @@
 # 🌬️ Streamgale – Code of Conduct
 
 Welcome to **Streamgale**, an open source project powered by purpose, people, and clean code. We aim to build exceptional software together—guided by foundation of trust and teamwork, 
-and the mindful, quality-driven mindset of **ZenForCode**.
+and the mindful, quality-driven mindset of **ZenForCode**. ZenForCode is opensource community at zenforcode.slack.com.
 
 This Code of Conduct is here to help us collaborate with respect, grow with intention, and innovate with clarity.
 
@@ -53,7 +53,7 @@ This Code of Conduct is here to help us collaborate with respect, grow with inte
 
 ## 🚫 Not Cool Here
 
-- Harassment,gaslighting , exclusion, or discrimination of any kind.
+- Harassment,gaslighting,exclusion, or discrimination of any kind.
 - Dismissing others’ ideas rudely or without explanation.
 - Using the project for self-promotion, spam, or pushing personal agendas.
 - Ignoring feedback loops or contributing in bad faith.

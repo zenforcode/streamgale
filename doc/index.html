@@ -1,0 +1,376 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>StreamGale: A new AI platform</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.5/dist/reset.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.5/dist/reveal.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.5/dist/theme/league.css"
+  id="theme"
+/>
+   <style>
+    table { width: 100%; font-size: 0.7em; }
+    th, td { padding: 4px; border-bottom: 1px solid #444; text-align: left; }
+    .mermaid { background: #fff; padding: 1em; border-radius: 10px; }
+    .slides section { word-break: break-word; font-size: 0.75em; }
+    iframe { width: 100%; max-width: 640px; height: 360px; margin-top: 10px; }
+    blockquote { font-style: italic; border-left: 4px solid #999; padding-left: 1em; color: #ccc; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <h1>StreamGale</h1>
+        <p>AI-Powered Data Streaming & Aggregation</p>
+        <p>Real-Time Intelligence for Cloud & Edge AI Workflows</p>
+        <p><small>Giorgio Zoppi – giorgio.zoppi@yenflow.com</small></p>
+      </section>
+      <section>
+        <h2>Who I am?</h2>
+        <p>Senior Software Engineer</p>
+        <p><small>Msc. In Computer Science & HDip. In Artificial Intelligence Applications</small></p>
+        <p>Extensive experience in cutting-edge technology development</p>
+        <p>In 2013 at Hewlett-Packard, we built HP Latex 3000 Platform </p>  
+        <p><a href="https://www.youtube.com/watch?v=6NxU1o-IOUM" target="_blank">▶️ HP Latex.</a></p>
+        <p>In 2022 at GM, I was part of the ADAS Data & AI Team (Ultracruise/SuperCruise).</p>
+        <p><a href="https://www.youtube.com/watch?v=YXdR-gYsv60" target="_blank">▶️ GM SuperCruise.</a></p>
+      </section>
+
+      <section>
+        <h2>Problem Statement</h2>
+        <ul>
+          <li>AI model training is slow and expensive</li>
+          <li>Medical imaging delays due to heavy file transfers</li>
+          <li>Edge AI depends too heavily on cloud connectivity</li>
+          <li>High costs from redundant data storage and compute</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>StreamGale Overview</h2>
+        <ul>
+          <li>Rust-based, real-time data streaming platform</li>
+          <li>Optimized for AI model training, inference, and federated learning</li>
+          <li>Designed for low-latency edge deployments & cloud efficiency</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Market Opportunity</h2>
+        <ul>
+          <li>$250B+ AI Industry</li>
+          <li>$30B+ Data Streaming Market</li>
+          <li>$60B+ Cloud AI Market</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Technology & Architecture</h2>
+        <ul>
+          <li>AI-optimized data pipelines</li>
+          <li>Scalable across multi-cloud and on-prem environments</li>
+          <li>Federated Learning built-in for privacy and performance</li>
+        </ul>
+      </section>
+      <section>
+        <h2>What is Federated Learning? </h2>
+        <ul>
+          <li>📡 StreamGale supports privacy-preserving distributed AI training</li>
+          <li>🛡️ Edge devices train locally, only gradients are shared</li>
+          <li>🎯 Avoids raw data transfer for better compliance and efficiency</li>
+          <li>🔁 Algorithms supported: FedAvg, FedProx, Scaffold</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Edge Inference with StreamGale</h2>
+        <ul>
+          <li>⚡ Execute ML models in real-time on edge devices</li>
+          <li>🔗 Reduce dependency on cloud latency and costs</li>
+          <li>📦 Supports sensor, camera, and diagnostic workloads</li>
+          <li>🔒 Improves privacy by avoiding data upload</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>TVM Integration</h2>
+        <ul>
+          <li>🚀 Compile and optimize models using Apache TVM</li>
+          <li>💡 Target-specific tuning (CPU, GPU, ARM)</li>
+          <li>🔄 Auto-scheduling for peak runtime performance</li>
+          <li>🧩 Compatible with PyTorch, TensorFlow, ONNX</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Comparative Landscape</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>StreamGale</th>
+              <th>Flower</th>
+              <th>Apache Flink</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Federated Learning</td>
+              <td>✅ Built-in for edge AI</td>
+              <td>✅ FL-centric</td>
+              <td>❌ Not supported</td>
+            </tr>
+            <tr>
+              <td>Stream Performance</td>
+              <td>✅ Rust-based, ultra-low latency</td>
+              <td>❌ Batch-oriented</td>
+              <td>✅ Java/Scala, high-throughput</td>
+            </tr>
+            <tr>
+              <td>Edge AI Support</td>
+              <td>✅ Native support</td>
+              <td>⚠️ Experimental</td>
+              <td>❌ Not edge-optimized</td>
+            </tr>
+            <tr>
+              <td>Cloud Cost Optimization</td>
+              <td>✅ Core feature</td>
+              <td>⚠️ Manual config needed</td>
+              <td>⚠️ Indirect via tuning</td>
+            </tr>
+            <tr>
+              <td>AI Use Case Fit</td>
+              <td>🎯 FL, stream, fleet ops, training</td>
+              <td>🎯 FL only</td>
+              <td>🎯 Generic stream analytics</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h3>Use Case 1: AI Medical Imaging</h3>
+        <p><strong>Persona: Dr. Rosa Di Micco. MD</strong> – Oncology, Milan San Raffaele Hospital</p>
+        <ul>
+          <li>📌 Problem: Breast Cancer Prediction</li>
+          <li>✅ Solution: StreamGale streams DICOM data directly to AI models inside the Hospital and use RNN to breast detect cancer
+            in early cases.
+          </li>
+        </ul>
+        <p><strong>📊 Results:</strong></p>
+        <ul>
+          <li>📌 Cancer screening and detection at early stage</li>
+          <li>⏳ 50–70% faster AI-based cancer detection</li>
+          <li>🏥 Oncologists looking for AI-assisted workflows</li>
+        </ul>
+        <p><a href="https://www.youtube.com/watch?v=gUcz7Dxp8e8" target="_blank">▶️ Rosa Interview.</a></p>
+      </section>
+
+      <section>
+        <h2>Use Case 2: Smart Fleet Operations</h2>
+        <p><strong>Persona: Raj Mehta</strong> – CTO, Autonomous Logistics Startup</p>
+        <ul>
+          <li>📌 Problem: Latency and cloud costs slow real-time fleet decisions</li>
+          <li>✅ Solution: StreamGale enables on-device edge AI inference</li>
+        </ul>
+        <p><strong>📊 Results:</strong></p>
+        <ul>
+          <li>🚛 30–50% lower cloud bandwidth costs</li>
+          <li>⚡ 20x faster edge inference</li>
+          <li>📡 70% less data transmitted to cloud</li>
+        </ul>
+        <p><a href="https://www.youtube.com/watch?v=Rodiy87t5VE" target="_blank">▶️ Smart Fleet & Supply Chain.</a></p>
+      </section>
+
+      <section>
+        <h2>Use Case 3: AI Model Training</h2>
+        <p><strong>Persona: Vipul Ved Prakash</strong> – Together AI, CEO</p>
+        <ul>
+          <li>📌 Problem: High costs and delays in training large AI/LLM models</li>
+          <li>✅ Solution: StreamGale reduces redundant data transfer & I/O</li>
+        </ul>
+        <p><strong>📊 Results:</strong></p>
+        <ul>
+          <li>💰 40–60% cloud compute cost savings</li>
+          <li>🚀 2–3x faster training times</li>
+          <li>🌍 Seamless scaling to multi-node (GPU/TPU)</li>
+        </ul>
+        <p><a href="https://www.youtube.com/watch?v=6iY1VmJkx4A" target="_blank">▶️ Customers want cost efficiency AI.</a></p>
+      </section>
+
+      <section>
+        <h2>Go-To-Market Strategy</h2>
+        <ul>
+          <li>Enterprise partnerships: Healthcare, Supply Chain, Cloud AI</li>
+          <li>Edge AI SDK integrations</li>
+          <li>Engaging open-source developer community</li>
+          <li>Engage AI Research Labs around Europe to optimize models.</li>
+          
+        </ul>
+      </section>
+
+      <section>
+        <h2>Revenue Model</h2>
+        <ul>
+          <li>SaaS licensing for AI workflows</li>
+          <li>Cloud AI training acceleration fees</li>
+          <li>On-prem enterprise deployments</li>
+          <li>Consulting for vertical integrations</li>
+        </ul>
+      </section>
+      
+      <section>
+        <h2>StreamGale Execution Plan</h2>
+        <p>This plan outlines our 6-month phased rollout to build, validate, and deploy StreamGale nodes.</p>
+        <ul>
+          <li>⚙️ Edge + Cloud support</li>
+          <li>🧠 AI inference (CNN, RNN, TVM, LLMs)</li>
+          <li>📦 Interoperability (Akka, Docker, K8s)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Phase 1 – Rust Ramp-Up</h2>
+        <ul>
+          <li>⏱ Duration: 2 weeks</li>
+          <li>👩‍💻 Team training on Rust, Tokio, Actix, Serde, Akka::Edge</li>
+          <li>🔧 Setup of basic async and network primitives</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Phase 2 – Business & Design Discovery</h2>
+        <ul>
+          <li>🔍 Identify early adopters and strongest use cases</li>
+          <li>📊 Design domain-specific topologies and Design Node </li>
+          <li>🛠️ Evaluate Akka Edge and integration feasibility</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Phase 3 – Prototype Node</h2>
+        <ul>
+          <li>🚀 Barebones implementation of the StreamGale node</li>
+          <li>✅ Integrate TVM for model inference</li>
+          <li>🔄 Test basic topology execution and data flow</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Phase 4 – Controller & Topology Parsing</h2>
+        <ul>
+          <li>🧠 Introduce "Virgil" controller for orchestration</li>
+          <li>📦 Define and parse topologies</li>
+          <li>🔁 Translate to executable Docker/K8s/Edge binaries</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Phase 5 – Docker & Cloud Execution</h2>
+        <ul>
+          <li>🐳 Dockerize key node and controller components</li>
+          <li>☁️ Deploy to cloud providers for testing (AWS/GCP)</li>
+          <li>🧪 Performance and cost benchmarks</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Phase 6 – Interoperability & Feedback Iteration</h2>
+        <ul>
+          <li>🔄 Refactor to support Akka, REST, and GRPC APIs</li>
+          <li>🧩 Interop validation with federated learning workloads</li>
+          <li>📣 Incorporate feedback from partners</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Visual Timeline</h2>
+        <div class="mermaid">
+          %%{init: {"theme": "default"}}%%
+          timeline
+            title StreamGale Rollout Roadmap
+            Month 0 : Rust ramp-up, async tools setup
+            Month 2 : Business discovery, design topologies, first prototype
+            Month 3 : Prototype node, validate TVM inference
+            Month 4 : Controller & topology execution (Virgil)
+            Month 5 : Docker & cloud deployments
+            Month 6 : API interop, real-world use case iteration
+        </div>
+      </section>
+      <section>
+        <h2>Join the StreamGale Mission</h2>
+        <p><strong>This is a volunteering project.</strong></p>
+        <ul>
+          <li>🌍 Be part of something meaningful: help save lives and shape the future</li>
+          <li>🧠 Deep learning on the job: AI, models, edge inference, distributed systems</li>
+          <li>📚 Constant growth: small, impactful tasks and collaborative design sessions</li>
+          <li>⏱️ Flexible commitment: from 1–10 hours/week</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Why Join?</h2>
+        <ul>
+          <li>🏆 Pride in building technology that matters</li>
+          <li>🚀 Career boost: real-world experience that sets you apart</li>
+          <li>🤝 Learn from passionate peers in open design sessions</li>
+          <li>💼 Potential future monetization if the product gains traction</li>
+        </ul>
+        <p><strong>Your contribution will be remembered and respected.</strong></p>
+      </section>
+      <section>
+        <h2>Together, We Make It Happen</h2>
+        <blockquote>
+          "Individually, we are one drop. Together, we are an ocean."
+          <br>– Ryunosuke Satoro
+        </blockquote>
+        <p><strong>Join the team that's shaping the future of AI at the edge.</strong></p>
+      </section>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.5/dist/reveal.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@11.4.1/plugin/mermaid/mermaid.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+  
+      // mermaid initialize config
+      mermaid: {
+        // flowchart: {
+        //   curve: 'linear',
+        // },
+      },
+  
+      // this plugin config
+      // mermaidPlugin: {
+      //   beforeRender(el) {
+      //     console.log(el);
+      //     // if return false this element will not call mermaid render
+      //   },
+      //
+      //   afterRender(el) {
+      //     console.log(el);
+      //   },
+      // },
+  
+      plugins: [RevealMermaid],
+    });
+  </script>
+  
+</body>
+</html>

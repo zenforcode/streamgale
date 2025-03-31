@@ -159,7 +159,7 @@
       </section>
 
       <section>
-        <h3>Use Case 1: AI Medical Imaging</h3>
+        <h3>Use Case 1: Breast Cancer Detection at the Edge</h3>
         <p><strong>Persona: Dr. Rosa Di Micco. MD</strong> – Oncology, Milan San Raffaele Hospital</p>
         <ul>
           <li>📌 Problem: Breast Cancer Prediction</li>
@@ -175,7 +175,41 @@
         </ul>
         <p><a href="https://www.youtube.com/watch?v=gUcz7Dxp8e8" target="_blank">▶️ Rosa Interview.</a></p>
       </section>
-
+      <section>
+        <h2>Use Case 1: Breast Cancer Detection at the Edge</h2>
+        <ul>
+          <li>🏥 AI runs on-site at hospital imaging centers</li>
+          <li>🔍 Real-time DICOM streaming to edge node</li>
+          <li>⚡ AI model (TVM-compiled) performs instant analysis</li>
+          <li>🧑‍⚕️ Results returned to radiologist within seconds</li>
+          <li>🔒 Patient data stays within hospital boundaries</li>
+        </ul>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Mammogram_with_Breast_Cancer.jpg" alt="Annotated Mammogram">
+        <p style="font-size: 0.65em;">Source: Wikimedia Commons</p>
+      </section>
+      <section>
+        <h2>Use Case 1: Breast Cancer Detection at the Edge</h2>
+        <pre class="mermaid">
+          %%{init: {"theme": "default"}}%%
+          graph LR
+            A[Imaging Device] --> B[Edge Node w/ StreamGale]
+            B --> C[TVM AI Model: Breast Cancer Detection]
+            C --> D[Diagnosis Result - Edge]
+            D --> E[Radiologist Review System]
+            style A fill:#eee,stroke:#333,stroke-width:1px
+            style C fill:#f96,stroke:#444,stroke-width:1px
+        </pre>
+      </section>
+      <section>
+        <h2>Impact</h2>
+        <ul>
+          <li>⏱️ Diagnosis time reduced from hours to minutes</li>
+          <li>📉 Reduced false positives via ensemble inference</li>
+          <li>🏥 Scalable across departments and hospitals</li>
+          <li>💡 Builds trust between AI and clinicians</li>
+        </ul>
+        <p><strong>StreamGale empowers frontline healthcare with real-time intelligence.</strong></p>
+      </section>
       <section>
         <h2>Use Case 2: Smart Fleet Operations</h2>
         <p><strong>Persona: Raj Mehta</strong> – CTO, Autonomous Logistics Startup</p>
@@ -191,7 +225,17 @@
         </ul>
         <p><a href="https://www.youtube.com/watch?v=Rodiy87t5VE" target="_blank">▶️ Smart Fleet & Supply Chain.</a></p>
       </section>
-
+      <section>
+        <h2>Use Case 2: Reducing Fleet AI Costs with StreamGale</h2>
+        <ul>
+          <li>📉 <strong>Less Cloud Dependency:</strong> AI runs locally on edge nodes — no need to stream all raw video/sensor data to the cloud</li>
+          <li>🚛 <strong>Lower Bandwidth Costs:</strong> Only metadata (like detected objects) sent, reducing cellular/network traffic by 70%</li>
+          <li>⚡ <strong>Faster Decisions:</strong> Real-time inference enables in-vehicle decision-making, improving efficiency and safety</li>
+          <li>💻 <strong>Optimized Edge Inference:</strong> TVM-compilation shrinks model size, reducing hardware resource usage</li>
+          <li>🔁 <strong>Smarter Routing & Aggregation:</strong> StreamGale orchestrates lightweight data pipelines tailored for fleet operations</li>
+        </ul>
+        <p><strong>Result:</strong> Operational savings, lower cloud bills, and faster, safer AI on the road.</p>
+      </section>
       <section>
         <h2>Use Case 3: AI Model Training</h2>
         <p><strong>Persona: Vipul Ved Prakash</strong> – Together AI, CEO</p>
